@@ -1,0 +1,40 @@
+@import '../../Theme/Styles/_variables_global';
+
+.multiple {
+	width: 100%;
+	padding: 16.5px 14px;
+	color: $color-black;
+	border-width: 0;
+	font-size: 18px;
+
+	.select-multiple__label {
+	}
+
+	.select-multiple__root {
+		.select-multiple__root__option {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 10px 0;
+			// border-bottom: 1px solid $color-gray-light;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+	.select-multiple__select {
+		font-size: 18px;
+
+		.select-multiple__select-item {
+			.select-multiple__select-item__button {
+				.select-multiple__select-item__button__svg {
+					width: 20px;
+					height: 20px;
+					// fill: $color-gray-light;
+				}
+			}
+		}
+	}
+}

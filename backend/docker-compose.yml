@@ -1,0 +1,51 @@
+version: "3.9"
+
+
+volumes:
+  django_static_volume:
+  django_media_volume:
+  postgres_data:
+
+
+x-backend: &backend
+  restart: unless-stopped
+  build:
+    context: .
+    dockerfile: ./docker/backend/Dockerfile
+  volumes:
+    - ./backend/pr8/logs:/app/backend/pr8/logs
+  env_file:
+    - ./backend/.env
+  depends_on:
+    - postgres
+  links:
+    - postgres
+
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    expose:
+      - 5432
+
+  redis:
+    restart: unless-stopped
+    image: redis:latest
+    expose:
+      - 6379
+
+  backend:
+    <<: *backend
+    command: sh /app/docker/backend/wsgi-entrypoint.sh
+    volumes:
+      - django_static_volume:/app/backend/pr8/staticfiles
+      - django_media_volume:/app/backend/pr8/media
+      - ./backend/pr8/logs:/app/backend/pr8/logs
+    ports:
+      - 80:8000

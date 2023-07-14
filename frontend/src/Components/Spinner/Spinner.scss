@@ -1,0 +1,82 @@
+:root {
+	--base-speed-dashoffset: 8000ms;
+	--base-speed-stroke: 6000ms;
+	--speed: 2;
+
+	--speed-dashoffset: calc(var(--base-speed-dashoffset) / var(--speed));
+	--speed-stroke: calc(var(--base-speed-stroke) / var(--speed));
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.spinner {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		display: block;
+		width: 115px;
+		height: 115px;
+	}
+}
+
+#el {
+	will-change: stroke, stroke-dashoffset;
+	stroke-dashoffset: 372;
+	animation: dash var(--speed-dashoffset) linear infinite,
+		stroke var(--speed-stroke) linear infinite;
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes stroke {
+	0% {
+		stroke: #f15a31;
+	}
+
+	20% {
+		stroke: #ffd31b;
+	}
+
+	33% {
+		stroke: #a6ce42;
+	}
+
+	40% {
+		stroke: #007ac1;
+	}
+
+	45% {
+		stroke: #007ac1;
+	}
+
+	55% {
+		stroke: #007ac1;
+	}
+
+	60% {
+		stroke: #007ac1;
+	}
+
+	67% {
+		stroke: #a6ce42;
+	}
+
+	80% {
+		stroke: #ffd31b;
+	}
+
+	100% {
+		stroke: #f15a31;
+	}
+}

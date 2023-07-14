@@ -1,0 +1,87 @@
+{
+	"name": "diktix-menu",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@emotion/react": "^11.10.6",
+		"@emotion/styled": "^11.10.6",
+		"@material-ui/core": "^4.12.4",
+		"@material-ui/icons": "^4.11.3",
+		"@mui/base": "^5.0.0-alpha.118",
+		"@mui/material": "^5.11.10",
+		"@mui/styled-engine-sc": "^5.11.9",
+		"@mui/system": "^5.11.9",
+		"@reduxjs/toolkit": "^1.8.3",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"@types/jest": "^27.5.2",
+		"@types/node": "^16.18.3",
+		"@types/react": "^18.0.24",
+		"@types/react-dom": "^18.0.8",
+		"@useweb/use-firebase": "^10.0.1",
+		"@useweb/use-firebase-messaging": "^2.3.3",
+		"firebase": "^9.17.1",
+		"formik": "^2.2.9",
+		"handy-svg": "^1.0.8",
+		"jwt-decode": "^3.1.2",
+		"lodash": "^4.17.21",
+		"moment": "^2.29.4",
+		"moment-duration-format": "^2.3.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-number-format": "^4.9.3",
+		"react-redux": "^8.0.2",
+		"react-router-dom": "^6.3.0",
+		"react-scripts": "5.0.1",
+		"react-select": "^5.7.0",
+		"react-spring": "^9.5.5",
+		"redux": "^4.2.0",
+		"redux-batched-actions": "^0.5.0",
+		"redux-saga": "^1.2.1",
+		"sass": "^1.54.4",
+		"styled-components": "^5.3.6",
+		"typed-redux-saga": "^1.5.0",
+		"typescript": "^4.8.4",
+		"web-vitals": "^2.1.4",
+		"yup": "^0.32.11"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@faker-js/faker": "^7.3.0",
+		"@jambit/eslint-plugin-typed-redux-saga": "^0.4.0",
+		"@typescript-eslint/eslint-plugin": "^5.33.0",
+		"@typescript-eslint/parser": "^5.33.0",
+		"eslint": "^8.21.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.30.1",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1"
+	}
+}

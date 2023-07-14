@@ -1,0 +1,85 @@
+@import '../../../UIKit/Theme/Styles/_variables_global.scss';
+
+.product-list__item {
+	margin-bottom: 16px;
+	border-radius: 12px;
+	margin-right: 16px;
+	margin-bottom: 16px;
+	width: 262px;
+	// flex-grow: 1;
+	background-color: $color-white-dirt;
+	padding: 16px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	user-select: none;
+
+	&__img {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	&__add {
+		margin-top: 5px;
+		width: 100%;
+		padding: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid green;
+		cursor: pointer;
+
+		&:hover {
+			background-color: aliceblue;
+		}
+	}
+
+	&__header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 16px;
+
+		&__cat {
+			border-radius: 4px;
+			padding: 4px 4px;
+			border: 1px solid #000000;
+			margin: 4px;
+		}
+
+		&__name {
+			font-size: 16px;
+			color: $color-black;
+		}
+
+		&__status {
+			display: flex;
+			align-items: center;
+			font-size: 13px;
+
+			&.-is-online {
+				color: $color-green;
+			}
+
+			&__cr {
+				width: 5px;
+				height: 5px;
+				border-radius: 100%;
+				margin-right: 5.5px;
+
+				&.-is-online {
+					background-color: $color-green;
+				}
+			}
+		}
+	}
+
+	&__address {
+		font-size: 12px;
+		color: $color-gray-dirt2;
+	}
+
+	&:hover {
+		background-color: $color-orange-dirt2;
+	}
+}

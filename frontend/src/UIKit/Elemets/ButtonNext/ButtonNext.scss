@@ -1,0 +1,21 @@
+@import '../../Theme/Styles/_variables_global.scss';
+
+.ButtonNext {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 24px;
+	color: $color-orange;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.NextIcon {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+}

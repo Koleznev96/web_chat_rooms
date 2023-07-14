@@ -1,0 +1,88 @@
+{% extends "common/base.html" %}
+{% load static %}
+
+
+{% block title %} Продукты {% endblock %}
+
+
+{% block css %}
+{{ block.super }}
+
+<link rel="stylesheet" href="{% static 'products/css/list.css' %}">
+
+{% endblock %}
+
+
+{% block content %}
+<section class="container section">
+
+    {% csrf_token %}
+
+    <h1 class="title">Продукты</h1>
+
+    <div id="product" class="product"></div>
+
+</section>
+{% endblock %}
+
+{% block js %}
+{{ block.super }}
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+<script>
+    // Получение данные о продуктах через REST API.
+    $.ajax({
+        url: "{% url 'products_api:products-list' %}",
+        method: "GET",
+        success: function(response) {
+            let data_list = response;
+            for (let i = 0; i < data_list.length; ++i) {
+                let current_item = data_list[i];
+                $('#product').append(
+                    `
+                    <div class="product__item">
+                        <div class="product__wrap">
+                            <div class="product__cover">
+                                <img class="product__img" src="${current_item['image']}" alt="product_image">
+                            </div>
+
+                            <div class="product__info">
+                                <div>
+                                    <ul class="product__tags">
+                                        {% for category in product.categories.all %}
+                                        <li class="product__tag">{{ category.name }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                    <p class="product__name">${current_item['name']}</p>
+                                    <p class="product__short-desk">${current_item['short_desc']}</p>
+                                    <p class="product__count-comment">Комментарии: (${current_item['count_comments']})</p>
+                                    <p class="product__rate">Оценка: ${current_item['average_rate']}</p>
+                                    <p class="product__price">${current_item['price']} ₽</p>
+                                </div>
+                            </div>
+
+                            <a href="${current_item['absolute_url']}" class="product__info-btn">Подробнее</a>
+                            <div id="product-${current_item['id']}__to-basket-btn" class="product__to-basket-btn">В корзину</div>
+
+                            <div id="product_${current_item['id']}_meta" style="display: none;">
+                                <input type="hidden" id="product_${current_item['id']}" data-product-id="${current_item['id']}">
+                                {% csrf_token %}
+                            </div>
+                        </div>
+                    </div>
+                    `
+                );
+                document.getElementById(`product-${current_item['id']}__to-basket-btn`).addEventListener("click", function() {
+                    let product_id = Number(document.getElementById(`product_${current_item['id']}`).dataset.productId);
+                    if (localStorage.getItem('products_ids') == null) {
+                        localStorage.setItem('products_ids', JSON.stringify([]));
+                    }
+                    let data = JSON.parse(localStorage.getItem('products_ids'));
+                    data.push(product_id);
+                    localStorage.setItem('products_ids', JSON.stringify(data));
+                });
+            }
+        },
+    });
+</script>
+{% endblock %}

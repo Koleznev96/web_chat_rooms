@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+$html-font-size: 16px;
+$tooltip-font-size: 0.8rem;
+
+//--------------------------------------------------------------------------------------------------//
+// variables - path
+//--------------------------------------------------------------------------------------------------//
+
+$avatarSize: 44px;
+
+//--------------------------------------------------------------------------------------------------//
+// @link https://material-ui.com/customization/breakpoints/
+//--------------------------------------------------------------------------------------------------//
+$screen-width-xs: 600px;
+$screen-width-sm: 700px; // modified one
+$screen-width-touch-pad: 810px;
+$screen-width-md: 960px;
+$screen-width-tablet: 1024px;
+$screen-width-lg: 1280px;
+$screen-width-xl: 1920px;
+
+$screen-height-sm: 805px;
+$screen-height-xs: 705px;
+$screen-height-xxs: 605px;
+$screen-width-xs400: 400px;
+
+$z-index-progress: 10;
+
+//--------------------------------------------------------------------------------------------------//
+// variables - transition
+//--------------------------------------------------------------------------------------------------//
+
+$trans-std: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+//--------------------------------------------------------------------------------------------------//
+// variables - colors
+//--------------------------------------------------------------------------------------------------//
+
+$color-white: #fff;
+$color-white-dirt: #fbf5f4;
+
+$color-orange: #285668;
+$color-orange-dirt: rgba(242, 141, 79, 0.2);
+$color-orange-dirt2: #fed0b3;
+
+$color-black: #191919;
+
+$color-grey: #879eb1;
+$color-gray-dirt: #ebf0f4;
+$color-gray-dirt2: #809fb8;
+
+$color-blue-light: #4da9ee;
+$color-blue-gray: #d0dfe2;
+$color-blue: #1f93e9;
+$color-blue-dark: #2078b3;
+$color-green: #43b31c;
+$color-red: #ff4f3f;
+$color-yellow: #ffb033;
+$color-grey-light: #e4e4e4;
+$color-grey3: #333333;
+$color-grey-dark: #1d1e1f;
+$color-input-icons: #91a7b4;
+
+$color-btn-bg: #cdd4d6;
+$color-btn-bg-hover: #b5bbbd;
+
+$color-black-01: rgba(0, 0, 0, 0.1);
+$color-black-02: rgba(0, 0, 0, 0.2);
+$color-black-03: rgba(0, 0, 0, 0.3);
+$color-black-05: rgba(0, 0, 0, 0.5);
+$color-black-08: rgba(0, 0, 0, 0.8);
+
+$transparent: rgba(255, 255, 255, 0);
+
+$color-white-05: rgba($color-white, 0.5);
+$color-white-07: rgba($color-white, 0.7);
+
+$color-text-light: $color-white-dirt;
+
+/**
+ * New design colors
+ * @link https://app.zeplin.io/project/5dc2814a876cfd558f00e22d/screen/5dc95cb20799c106c9ecd23e
+ */
+$color-new-cherry: #f52764;
+$color-new-light-steel: #e8f0f5;
+$color-new-dark-steel: #87a0ae;
+$color-new-grey: #aaaaaa;
+$color-light-grey: #f5f5f5;
+$color-new-dark-grey: #222222;
+$color-new-semi-dark-grey: #666767;
+$color-new-success: #7bdf3e;
+$color-new-error: #ff4d3b;
+$color-new-msn-guest: #aad4ff;
+$color-new-video-chat-grad-start: #eb008d;
+$color-new-video-chat-grad-end: #ff503e;
+$color-new-messenger-grad-start: #204fd4;
+$color-new-messenger-grad-end: #3d94ed;
+$color-new-messenger-unseen: #3690d3;
+$color-new-separator-grad-start: #edf2f5;
+$color-new-separator-grad-end: $color-white;
+$color-new-message-status: #567c98;
+$color-new-media-bg: #6a5cce;
+$color-new-chat-gray: #8fa6b3;
+$color-text-input-border: #bac9d1;
+$color-new-success-grad-end: #99df3e;
+$color-new-error-grad-start: #df5f38;
+$color-new-error-grad-end: #e82424;
+$color-new-error-snackbar: #d32f2f;
+$color-new-login-bg: #fafafa;
+
+$desktop-mobile-recording-gradient: linear-gradient(
+	180deg,
+	$color-new-video-chat-grad-start 0%,
+	$color-new-video-chat-grad-end 100%
+);
+
+//--------------------------------------------------------------------------------------------------//
+// Chat colours
+// @link https://xd.adobe.com/view/4b7d091b-4896-48d4-80e1-21672d04599e-1e2e/
+// @link http://phabricator.y/T1441#32101
+//--------------------------------------------------------------------------------------------------//
+$color-chat-header-background: #dbe5ee;
+$color-chat-private: #00cea3;
+$color-chat-admin: $color-new-cherry;
+$color-chat-voyeur: #6a5cce;
+$color-chat-group: #eb7d00;
+
+//--------------------------------------------------------------------------------------------------//
+// variables - sizes
+//--------------------------------------------------------------------------------------------------//
+
+$size-grid: 8px;
+$size-height: 33px;
+
+$boxsize-groups-label: 165px;
+
+$box-radius-large: 5px;
+$box-radius-std: 2px;
+$box-radius-sml: 1px;
+
+$box-shadow-color: rgb(156, 191, 212);
+
+$box-shadow-1: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+$box-shadow-2: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+$box-shadow-3: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
+$box-shadow-4: 0 20px 40px 0 rgba(0, 0, 0, 0.3), 0 14px 12px 0 rgba(0, 0, 0, 0.17);
+$box-shadow-5: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+$box-shadow-6: 0 1px 7px 0 rgba($color-black, 0.17);
+$box-shadow-7: 0 0 7px 0 rgba($color-black, 0.29);
+$box-shadow-8: linear-gradient(
+	180deg,
+	rgba(0, 0, 0, 0) 0%,
+	rgba(0, 0, 0, 0) 60%,
+	rgba(0, 0, 0, 0.2) 80%,
+	$color-new-dark-grey 100%
+);
+
+$box-shadow-std: none;
+$box-shadow-hover: none;
+
+//--------------------------------------------------------------------------------------------------//
+// variables - text
+//--------------------------------------------------------------------------------------------------//
+
+$color-input-bg: $color-white;
+$font-size-small: 10px;
+$user-info-width: 320px;
+$message-input-height: 45px;
+$nav-top-height: 42px;
+$nav-top-height-collapsed: 9px;
+$chat-controls-horizontal-height: 149px;
+
+//--------------------------------------------------------------------------------------------------//
+// variables - text
+//--------------------------------------------------------------------------------------------------//
+
+$color-input-bg: $color-white;
+
+//--------------------------------------------------------------------------------------------------//
+// animations
+//--------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------------------------------------------------------//
+// Globally used sizes constants
+//--------------------------------------------------------------------------------------------------//
+$messageAreaInputWarningHeight: 34px;
+$channelAvatarSize: 44px;
+$channelSelectedAvatarStroke: 2px;
+$imagePreviewSize: 180px;
+$videoPreviewWidth: 250px;
+
+@mixin customVhProperty($property, $value: 100) {
+	/* Fallback for browsers that do not support Custom Properties */
+	#{$property}: #{$value}vh;
+	#{$property}: customVhValue($value);
+}
+
+@function customVhValue($value, $delta: 0px) {
+	@return calc(var(--vh, 1vh) * #{$value} + #{$delta});
+}
+
+@mixin chatGuestAvatarStyles() {
+	$coloredBorderWidth: 2.5px;
+	background-color: $color-new-dark-steel;
+
+	&.-is-admin,
+	&.-is-controller {
+		background: $color-white;
+		color: $color-new-dark-steel;
+		border: solid $color-chat-admin $coloredBorderWidth !important;
+	}
+
+	&.-tv-admin {
+		color: $color-white;
+		background-color: $color-new-cherry;
+	}
+
+	&.-is-lobby {
+		color: $color-white;
+		background: $color-new-cherry;
+	}
+
+	&.-is-private {
+		border: solid $color-chat-private $coloredBorderWidth !important;
+	}
+
+	&.-group-chat {
+		border: solid $color-chat-group $coloredBorderWidth !important;
+	}
+
+	&.-is-voyeur {
+		color: $color-chat-voyeur;
+		background-color: $color-white;
+		border: solid $color-chat-voyeur $coloredBorderWidth !important;
+	}
+}

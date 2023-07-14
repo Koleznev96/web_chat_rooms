@@ -1,0 +1,27 @@
+@import '../../UIKit/Theme/Styles/_variables_global.scss';
+
+.root-container {
+	width: 100%;
+	height: 100vh;
+	background-color: $color-white-dirt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.root-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.panel-container {
+	width: 80%;
+	height: 100%;
+	margin-left: 15px;
+	display: flex;
+	justify-content: space-between;
+	padding-right: 20px;
+}

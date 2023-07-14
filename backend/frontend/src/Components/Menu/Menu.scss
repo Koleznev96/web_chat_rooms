@@ -1,0 +1,57 @@
+@import '../../UIKit/Theme/Styles/_variables_global.scss';
+
+.menu-container {
+	width: 20%;
+	min-width: 300px;
+	height: 100%;
+	margin-right: 15px;
+}
+
+.menu-list {
+	display: flex;
+	flex-direction: column;
+	padding-right: 38px;
+}
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 34px;
+	transition: 0.3s;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 10px;
+	min-height: 52px;
+	margin: 5px 0;
+
+	.menu-item-icon {
+		height: 18px;
+		width: 18px;
+		margin-right: 25px;
+		transition: 0.3s;
+	}
+
+	.menu-item-label {
+		margin-top: 2px;
+		font-size: 16px;
+		color: $color-grey;
+		transition: 0.3s;
+	}
+
+	.menu-item-label-active {
+		color: $color-black;
+	}
+
+	&:hover {
+		background-color: $color-orange-dirt2;
+
+		.menu-item-label {
+			color: $color-black;
+		}
+	}
+}
+
+.menu-item-active {
+	background-color: $color-orange-dirt2;
+}

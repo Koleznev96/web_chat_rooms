@@ -1,0 +1,63 @@
+@import '../../UIKit/Theme/Styles/_variables_global.scss';
+
+.login-form {
+	margin-top: 10px;
+}
+
+.login-form-label {
+	font-size: 14px;
+}
+
+.login-form-inputs {
+	margin-top: 20px;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0.5px 0.9px 34px 0 rgb(135 158 177 / 50%);
+}
+
+.login-form-settings {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.login-form-settings-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.login-form-settings-toggle-label {
+	margin-top: 3px;
+	font-size: 16px;
+	max-width: 80%;
+}
+
+.login-form-settings-button {
+	padding: 6px 20px;
+	border-radius: 20px;
+	background-color: $color-orange;
+	color: $color-white;
+	font-size: 13px;
+	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.login-form-settings-footer {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.login-form-error {
+	margin-left: 10px;
+	margin-top: 10px;
+	color: $color-red;
+	font-size: 14px;
+}
